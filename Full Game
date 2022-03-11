@@ -1,0 +1,26 @@
+print("Remembering Alice\n\n")
+
+print(
+    "You wake up in a dark room with nothing but three doors in front of you.")
+
+door_choice = input("Which door would you like to enter? Red, blue, or yellow? ")
+door_choice = door_choice.lower()
+if door_choice == "yellow":
+    pill1 = input("""You enter a yellow room with an incredibly tiny door and a table with a pill on it. Would you like to take the pill, y or n? """).lower()
+    if pill1 == "y":
+        help = input("""You turn very, very small after taking the pill. You walk through the tiny door and see a family of mice. They tell you they can help you escape. Do you trust the mice, Y or N? """).lower()
+        if help == "n":
+            drink = input("""You don't trust the mice. They seem suspicious. One of them advances at you menacingly, so you run through another small door. This room has nothing but one large door and an exit sign over it. You see a tiny table with a small bottle of liquid, do you drink it? Y or N? """).lower()
+            if drink == "y":
+                print("""You drink from the bottle and grow to normal size. You are now able to escape out of the exit door and run home to safety. You win the game!""")
+            else:
+                print("The mice catch up with you and take you to their den where they devour you. Game over.")
+        else:
+            print("The mice have betrayed you. They lead you to their slaughterhouse where they slice you up for dinner. Game over.")
+    else:
+        print("You decide not to take the pill. There is no way out of this room. You die of dehydration. Game over.")
+        
+elif door_choice == "blue":
+    print("You enter a room that instantly starts filling with water and you drown. Game over.")
+else:
+    print("Your enter a room of fire and burn right up. Game over.")
